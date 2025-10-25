@@ -181,7 +181,7 @@ body {
 
 /* Add Todo Modal */
 .add-todo-modal {
-  background-color: #222;
+  background-color: #222 ;
   color: #fff;
   border-radius: 12px;
   padding: 20px;
@@ -190,7 +190,7 @@ body {
 .todo-input,
 .add-todo-modal input[type="text"],
 .add-todo-modal input[type="date"] {
-  background-color: #2a2a2a !important;
+  background-color: #222 !important;
   color: #fff !important;
   border: none;
 }
@@ -308,3 +308,50 @@ body,
   background-color: #141414; /* keep consistent */
 }
 
+/* Make all inputs inside modal match modal background */
+.add-todo-modal input,
+.add-todo-modal select,
+.add-todo-modal textarea {
+    background-color: #222 !important;
+    color: #fff !important;
+    border: 1px solid #444; /* optional: subtle border */
+    border-radius: 6px;
+}
+
+/* Make the row containers transparent */
+.add-todo-modal .row,
+.add-todo-modal .d-flex {
+    background-color: transparent !important;
+}
+
+/* Labels should remain visible */
+.add-todo-modal label {
+    color: #fff;
+}
+
+/* Radio buttons wrapper spacing */
+.add-todo-modal .d-flex.gap-3 {
+    background-color: transparent !important;
+    padding: 0;
+}
+/* Add border only to Title and Tags inputs */
+#todoTitle,
+#todoTags {
+  background-color: #222 !important; /* keep modal dark */
+  color: #fff !important;
+  border: 1px solid darkgrey;        /* subtle border */
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+/* Title, Tags, and Date inputs */
+#todoTitle,
+#todoTags,
+#startDate,
+#endDate {
+  background-color: #222 !important; /* keep modal dark */
+  color: #fff !important;
+  border: 1px solid darkgrey;        /* subtle border */
+  border-radius: 6px;
+  padding: 8px 12px;
+}
