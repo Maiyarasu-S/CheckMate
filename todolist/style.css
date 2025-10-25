@@ -1,0 +1,310 @@
+body {
+  background-color: #141414;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.sidebar {
+  background-color: #1e1e1e;
+  height: 100vh;
+  padding: 20px;
+  border-right: 1px solid #2a2a2a;
+}
+
+.sidebar h4 {
+  color: #fff;
+}
+
+.nav-link {
+  color: #ccc;
+  margin-bottom: 8px;
+  transition: 0.2s;
+  display: flex;
+  justify-content: flex-start; /* everything on left */
+  align-items: center;          /* vertical center */
+  gap: 12px;                    /* spacing between circle and title */
+  position: relative;
+  padding-left: 10px;
+  border-radius: 8px;
+}
+
+.nav-link:hover,
+/* Selected list styling */
+.nav-link.active {
+  background-color: rgb(242, 200, 107); /* yellow background */
+  color: #000 !important;               /* black text */
+}
+
+/* Icon container for delete & rename */
+.nav-link .icon-container {
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.nav-link:hover .icon-container {
+  opacity: 1;
+}
+
+/* Icons */
+.nav-link .rename-list {
+  color: #000000;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 19px; 
+}
+
+.nav-link .delete-list {
+  color: #f44336;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+#addListBtn {
+  opacity: 0.7;
+  transition: opacity 0.2s, background-color 0.2s;
+  padding: 12px 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+#addListBtn:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Todo Section */
+.todo-section {
+  background-color: #181818;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#todoContent {
+  text-align: left;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+/* Todo Items */
+.todo-item {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 15px 25px;
+  min-height: 80px;
+  margin-bottom: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;  /* vertically center everything */
+  gap: 12px;            /* space between checkbox and content */
+  transition: background 0.2s, transform 0.2s;
+}
+
+.todo-item:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+/* Make the content inside the main todo section narrower */
+.todo-section {
+  padding-left: 15px;  /* reduce side padding */
+  padding-right: 15px; /* reduce side padding */
+  max-width: 600px;    /* set max width for content */
+  margin: 0 auto;      /* center content inside the main section */
+}
+
+.todo-item {
+  padding: 8px 10px;   /* reduce padding inside each todo item */
+  margin-bottom: 10px; /* optional: space between items */
+}
+
+/* Container for title + priority badge */
+.todo-item-content {
+  display: flex;
+  justify-content: space-between; /* push priority to right */
+  align-items: center;
+  flex-grow: 1; /* take remaining space */
+} 
+
+.todo-item h6 {
+  margin: 0 0 5px 0;
+  font-weight: 600;
+  color: #fff;
+}
+
+.todo-item p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* Priority badges */
+.badge-priority-high {
+  background-color: #e74c3c;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+}
+
+.badge-priority-mid {
+  background-color: #f39c12;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+}
+
+.badge-priority-low {
+  background-color: #f6da7b;
+  color: #000;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+}
+
+/* Add Todo Modal */
+.add-todo-modal {
+  background-color: #222;
+  color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.todo-input,
+.add-todo-modal input[type="text"],
+.add-todo-modal input[type="date"] {
+  background-color: #2a2a2a !important;
+  color: #fff !important;
+  border: none;
+}
+
+.add-todo-modal input::placeholder {
+  color: #aaa;
+}
+
+#addTodoModal .modal-dialog {
+  max-width: 700px;
+  width: 90%;
+}
+
+.btn-cancel,
+.btn-add {
+  border: none;
+  border-radius: 8px;
+}
+
+.btn-cancel {
+  background-color: #f6da7b;
+  color: #000;
+}
+
+.btn-add {
+  background-color: #f6da7b;
+  color: #000;
+}
+
+.btn-add:hover {
+  background-color: #e6c15a;
+  color: #000;
+}
+
+/* Main Add Todo button */
+.add-todo-btn {
+  background-color: transparent;
+  border: none;
+  color: #fff !important;  /* force white */
+  font-weight: 600;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.add-todo-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transform: translateY(-1px); /* subtle lift */
+}
+
+/* Completed checkbox */
+.nav-link .complete-checkbox {
+  width: 24px;             /* increased size */
+  height: 24px;            /* increased size */
+  border: 2px solid #f2c86b; /* yellow outline */
+  border-radius: 50%;
+  margin-right: 12px;      /* spacing to title */
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background 0.2s;
+}
+
+.nav-link.completed .complete-checkbox {
+  background-color: #f2c86b; /* filled yellow when completed */
+}
+
+.nav-link.completed span:first-child {
+  color: #888 !important; /* grey out the title */
+  text-decoration: line-through;
+}
+
+/* Todo item completed checkbox with tick */
+.todo-item .complete-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #f2c86b; /* yellow outline */
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;             /* flex to center tick */
+  align-items: center;       /* vertical center */
+  justify-content: center;   /* horizontal center */
+  font-size: 16px;           /* tick size */
+  color: #fff;               /* tick color */
+  transition: background 0.2s;
+}
+
+.todo-item.completed .complete-checkbox {
+  background-color: #f2c86b; /* filled yellow */
+  color: #000;               /* tick color inside */
+}
+
+
+.todo-item.completed h6 {
+  color: #888; /* grey out the title */
+  text-decoration: line-through;
+}
+
+/* Ensure the title takes remaining space and stays next to circle */
+.nav-link span:first-child {
+  flex-grow: 1;
+  display: inline-block;
+}
+
+body,
+.container-fluid,
+.row {
+  background-color: #141414; /* same as your .todo-section color */
+}
+
+.todo-section {
+  background-color: #141414; /* keep consistent */
+}
+
