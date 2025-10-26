@@ -3,9 +3,10 @@
 <p align="center">
 A fast and flexible web-based todo list app. No account required.
 <br>
+</p>
   CLICK THIS LINK 🔗 ➤➤➤➤ [![View Landing Page](https://img.shields.io/badge/View-Projects-blue)](https://maiyarasu-s.github.io/CheckMate/)
 <br>
-</p>
+
 
 <img style="border-radius:10px;" src="Screenshot-1.png">
 
